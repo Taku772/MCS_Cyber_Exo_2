@@ -27,7 +27,9 @@ Script_Users.ps1 :
 - Groupes : groupe1 à groupe6 du CSV
 
 3. Vérifications
+
 Get-ADUser -Filter * -SearchBase "OU=Utilisateurs,DC=laplateforme,DC=io"
+
 Get-ADGroupMember "Cadre"
 
 
