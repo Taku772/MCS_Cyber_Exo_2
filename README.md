@@ -2,9 +2,13 @@ Processus
 
 (Windows Serveur 2022)
 
-1. Création domaine
+1. Création domaine avec le script.
 Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
-Install-ADDSForest -DomainName "laplateforme.io" 
+Install-ADDSForest
+  -DomainName "laplateforme.io"
+  -DomainNetbiosName "LAPLATEFORME"
+  -SafeModeAdministratorPassword (ConvertTo-SecureString "Azerty_2025!" -AsPlainText -Force)
+  -Force
 
  Serveur redémarre -> contrôleur de domaine prêt.
 
